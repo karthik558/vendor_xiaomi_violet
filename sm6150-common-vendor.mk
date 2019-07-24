@@ -22,12 +22,16 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm6150-common/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
+    vendor/xiaomi/sm6150-common/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
+    vendor/xiaomi/sm6150-common/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:system/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:system/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/com.qualcomm.qti.imscmservice.xml:system/etc/permissions/com.qualcomm.qti.imscmservice.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/embms.xml:system/etc/permissions/embms.xml \
+    vendor/xiaomi/sm6150-common/proprietary/etc/permissions/izat.xt.srv.xml:system/etc/permissions/izat.xt.srv.xml \
+    vendor/xiaomi/sm6150-common/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:system/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/qti_libpermissions.xml:system/etc/permissions/qti_libpermissions.xml \
     vendor/xiaomi/sm6150-common/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
@@ -37,6 +41,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm6150-common/proprietary/framework/QtiTelephonyServicelibrary.jar:system/framework/QtiTelephonyServicelibrary.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/com.qti.dpmframework.jar:system/framework/com.qti.dpmframework.jar \
+    vendor/xiaomi/sm6150-common/proprietary/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar:system/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar:system/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:system/framework/com.qualcomm.qti.uceservice-V2.0-java.jar \
@@ -52,6 +57,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm6150-common/proprietary/framework/com.quicinc.cne.server-V2.2-java.jar:system/framework/com.quicinc.cne.server-V2.2-java.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/embmslibrary.jar:system/framework/embmslibrary.jar \
+    vendor/xiaomi/sm6150-common/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/xiaomi/sm6150-common/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
@@ -107,10 +113,17 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm6150-common/proprietary/lib64/libfm-hci.so:system/lib64/libfm-hci.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
+    vendor/xiaomi/sm6150-common/proprietary/lib64/liblocationservice_jni.so:system/lib64/liblocationservice_jni.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
+    vendor/xiaomi/sm6150-common/proprietary/lib64/libxt_native.so:system/lib64/libxt_native.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.esepowermanager@1.0.so:system/lib64/vendor.qti.esepowermanager@1.0.so \
+    vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.gnss@1.0.so:system/lib64/vendor.qti.gnss@1.0.so \
+    vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.gnss@1.1.so:system/lib64/vendor.qti.gnss@1.1.so \
+    vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.gnss@1.2.so:system/lib64/vendor.qti.gnss@1.2.so \
+    vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.gnss@2.0.so:system/lib64/vendor.qti.gnss@2.0.so \
+    vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.gnss@2.1.so:system/lib64/vendor.qti.gnss@2.1.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so:system/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so:system/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so \
     vendor/xiaomi/sm6150-common/proprietary/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so:system/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so \
@@ -812,6 +825,7 @@ PRODUCT_PACKAGES += \
     imssettings \
     CNEService \
     WfdService \
+    com.qualcomm.location \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
