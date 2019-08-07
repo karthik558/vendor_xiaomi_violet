@@ -1,0 +1,10 @@
+service perf-hal-1-0 /vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
+    class hal
+    user root
+    group root readproc
+
+on property:vold.decrypt=trigger_restart_min_framework
+    stop perf-hal-1-0
+
+on property:vold.decrypt=trigger_restart_framework
+    start perf-hal-1-0
