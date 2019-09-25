@@ -66,6 +66,18 @@ LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := vendor.qti.hardware.fm@1.0
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES_64 := proprietary/product/lib64/vendor.qti.hardware.fm@1.0.so
+LOCAL_SRC_FILES_32 := proprietary/product/lib/vendor.qti.hardware.fm@1.0.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PRODUCT_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := com.quicinc.cne.api@1.0
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES := proprietary/product/lib64/com.quicinc.cne.api@1.0.so
