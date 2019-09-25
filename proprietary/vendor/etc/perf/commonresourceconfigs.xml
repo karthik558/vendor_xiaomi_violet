@@ -81,6 +81,8 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x19" Node="/proc/sys/kernel/sched_initial_task_util" />
         <Minor OpcodeValue="0x1A" Node="/sys/devices/system/cpu/cpu0/sched_load_boost" />
         <Minor OpcodeValue="0x1B" Node="/proc/sys/kernel/sched_little_cluster_coloc_fmin_khz" />
+        <Minor OpcodeValue="0x1C" Node="/dev/stune/top-app/schedtune.boost" />
+        <Minor OpcodeValue="0x1D" Node="/proc/sys/kernel/sched_busy_hysteresis_enable_cpus" />
     <!-- sched major end -->
 
     <!-- core hotplug major start -->
