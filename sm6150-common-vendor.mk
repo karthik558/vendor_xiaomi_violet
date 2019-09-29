@@ -852,7 +852,6 @@ PRODUCT_PACKAGES += \
     SoterService \
     WfdService \
     libwfdnative \
-    com.qualcomm.location \
     CneApp \
     TimeService \
     PowerOffAlarm \
