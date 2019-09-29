@@ -259,17 +259,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "libwfdnative",
-	owner: "xiaomi",
-	apk: "proprietary/priv-app/WfdService/lib/arm64/libwfdnative.so",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-}
-
-android_app_import {
 	name: "CneApp",
 	owner: "xiaomi",
 	apk: "proprietary/vendor/app/CneApp/CneApp.apk",
