@@ -23,7 +23,7 @@ cc_prebuilt_library_shared {
 	name: "libantradio",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm: {
@@ -34,13 +34,32 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libbtconfigstore",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/lib/libbtconfigstore.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/lib64/libbtconfigstore.so"],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
 }
 
 cc_prebuilt_library_shared {
 	name: "libMpeg4SwEncoder",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm: {
@@ -51,6 +70,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -58,7 +78,7 @@ cc_prebuilt_library_shared {
 	name: "libplatformconfig",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm: {
@@ -69,6 +89,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -76,7 +97,7 @@ cc_prebuilt_library_shared {
 	name: "libthermalclient",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm: {
@@ -87,6 +108,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -94,7 +116,7 @@ cc_prebuilt_library_shared {
 	name: "vendor.qti.hardware.capabilityconfigstore@1.0",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm: {
@@ -105,6 +127,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -112,7 +135,7 @@ cc_prebuilt_library_shared {
 	name: "vendor.qti.hardware.fm@1.0",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm: {
@@ -123,6 +146,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	prefer: true,
 	product_specific: true,
 }
 
@@ -130,7 +154,7 @@ cc_prebuilt_library_shared {
 	name: "com.quicinc.cne.api@1.0",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm64: {
@@ -138,6 +162,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	prefer: true,
 	product_specific: true,
 }
 
@@ -145,7 +170,7 @@ cc_prebuilt_library_shared {
 	name: "com.quicinc.cne.api@1.1",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm64: {
@@ -153,6 +178,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	prefer: true,
 	product_specific: true,
 }
 
@@ -160,7 +186,7 @@ cc_prebuilt_library_shared {
 	name: "com.quicinc.cne.constants@1.0",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm64: {
@@ -168,6 +194,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	prefer: true,
 	product_specific: true,
 }
 
@@ -175,7 +202,7 @@ cc_prebuilt_library_shared {
 	name: "com.quicinc.cne.constants@2.0",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm64: {
@@ -183,6 +210,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	prefer: true,
 	product_specific: true,
 }
 
@@ -190,7 +218,7 @@ cc_prebuilt_library_shared {
 	name: "com.quicinc.cne.constants@2.1",
 	owner: "xiaomi",
 	strip: {
-		none:true,
+		none: true,
 	},
 	target: {
 		android_arm64: {
@@ -198,6 +226,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	prefer: true,
 	product_specific: true,
 }
 
@@ -259,6 +288,17 @@ android_app_import {
 	name: "QtiTelephonyService",
 	owner: "xiaomi",
 	apk: "proprietary/product/app/QtiTelephonyService/QtiTelephonyService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
+android_app_import {
+	name: "atfwd",
+	owner: "xiaomi",
+	apk: "proprietary/product/app/atfwd/atfwd.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -363,5 +403,6 @@ cc_prebuilt_binary {
 	name: "chargeonlymode",
 	owner: "xiaomi",
 	srcs: ["proprietary/bin/chargeonlymode"],
+	prefer: true,
 }
 
