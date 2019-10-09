@@ -55,24 +55,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "liblbs_core",
-	owner: "xiaomi",
-	strip: {
-		none:true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/liblbs_core.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/liblbs_core.so"],
-		},
-	},
-	compile_multilib: "both",
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libplatformconfig",
 	owner: "xiaomi",
 	strip: {
