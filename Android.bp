@@ -266,7 +266,7 @@ android_app_import {
 	name: "TimeService",
 	owner: "xiaomi",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
