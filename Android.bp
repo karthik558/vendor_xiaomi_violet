@@ -386,13 +386,6 @@ dex_import {
 	jars: ["proprietary/framework/WfdCommon.jar"],
 }
 
-dex_import {
-	name: "vendor.qti.hardware.capabilityconfigstore-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/product/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar"],
-	product_specific: true,
-}
-
 cc_prebuilt_binary {
 	name: "chargeonlymode",
 	owner: "xiaomi",
