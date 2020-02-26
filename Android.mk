@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter davinci violet,$(TARGET_DEVICE)),)
+ifneq ($(filter davinci phoenix violet,$(TARGET_DEVICE)),)
 
 endif
