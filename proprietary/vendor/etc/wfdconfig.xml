@@ -187,7 +187,7 @@
             <M14Support>0</M14Support>              <!-- 0/1 M14 supported or not -->
             <InputCategory>
                 <Generic>1</Generic>                <!-- 0/1 - support generic or not -->
-                <HID>1</HID>                        <!-- 0/1 - support HID or not -->
+                <HID>0</HID>                        <!-- 0/1 - support HID or not -->
             </InputCategory>
 
             <!--  Supported input events  -->
