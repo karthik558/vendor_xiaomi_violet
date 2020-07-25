@@ -42,7 +42,7 @@ service vendor.adsprpcd_audiopd /vendor/bin/adsprpcd audiopd
    group media
 
 service vendor.adsprpcd_sensorspd /vendor/bin/adsprpcd sensorspd
-   class main
+   class core
    user system
    group system
 
