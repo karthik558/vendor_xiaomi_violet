@@ -1,4 +1,4 @@
-# Copyright (c) 2019 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2020 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -43,10 +43,5 @@ service vendor.adsprpcd_audiopd /vendor/bin/adsprpcd audiopd
 
 service vendor.adsprpcd_sensorspd /vendor/bin/adsprpcd sensorspd
    class core
-   user system
-   group system
-
-service vendor.cdsprpcd /vendor/bin/cdsprpcd
-   class main
    user system
    group system
