@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2020-2021 Wave-OS
+ * Copyright (C) 2020-2021 Cygnus OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -91,9 +91,31 @@ android_app_import {
 }
 
 android_app_import {
+	name: "PerformanceMode",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/app/PerformanceMode/PerformanceMode.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
 	name: "QtiTelephonyService",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "workloadclassifier",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/app/workloadclassifier/workloadclassifier.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -155,20 +177,44 @@ dex_import {
 	jars: ["proprietary/framework/WfdCommon.jar"],
 }
 
+dex_import {
+	name: "QPerformance",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/QPerformance.jar"],
+}
+
+dex_import {
+	name: "QXPerformance",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/QXPerformance.jar"],
+}
+
+dex_import {
+	name: "UxPerformance",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/UxPerformance.jar"],
+}
+
 prebuilt_etc_xml {
-	name: "manifest_android.hardware.drm@1.3-service.widevine",
+	name: "manifest_android.hardware.drm@1.3-service.widevine.xml",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
-	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor.qti.gnss@4.0-service",
+	name: "vendor.qti.gnss@4.0-service.xml",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
-	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.qti.hardware.servicetracker@1.2-service.xml",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml",
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
