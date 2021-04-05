@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+     DSI Module configuration XML file
+     Copyright (c) 2013, 2015, 2017-2019 Qualcomm Technologies, Inc.
+     All Rights Reserved.
+     Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
 <list name="dsi_config">
 
    <!-- Configuration for legacy MSM targets -->

@@ -193,7 +193,7 @@
             <M14Support>0</M14Support>              <!-- 0/1 M14 supported or not -->
             <InputCategory>
                 <Generic>1</Generic>                <!-- 0/1 - support generic or not -->
-                <HID>0</HID>                        <!-- 0/1 - support HID or not -->
+                <HID>1</HID>                        <!-- 0/1 - support HID or not -->
             </InputCategory>
 
             <!--  Supported input events  -->
@@ -704,7 +704,7 @@
         To disable/enable audio stream playback
         support during power suspend - 0 or 1
     -->
-    <AudioStreamInSuspend>0</AudioStreamInSuspend>
+    <AudioStreamInSuspend>1</AudioStreamInSuspend>
 
     <!--
         Compensation delay for audio
