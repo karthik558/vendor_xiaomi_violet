@@ -704,7 +704,7 @@
         To disable/enable audio stream playback
         support during power suspend - 0 or 1
     -->
-    <AudioStreamInSuspend>1</AudioStreamInSuspend>
+    <AudioStreamInSuspend>0</AudioStreamInSuspend>
 
     <!--
         Compensation delay for audio

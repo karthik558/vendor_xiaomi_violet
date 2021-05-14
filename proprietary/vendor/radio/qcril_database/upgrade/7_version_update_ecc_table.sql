@@ -232,19 +232,4 @@ INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','13','197','
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','13','116000','','');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('208','13','116117','','');
 
-DELETE FROM qcril_emergency_source_mcc_table where MCC = '602';
-DELETE FROM qcril_emergency_source_voice_table where MCC = '602';
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','121','','full');
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','122','','full');
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','123','','full');
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','126','','full');
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','128','','full');
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','129','','full');
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','150','','full');
-INSERT INTO "qcril_emergency_source_voice_table" VALUES('602','180','','full');
-DELETE FROM qcril_emergency_source_hard_mcc_table where MCC = '602' AND NUMBER = '120';
-DELETE FROM qcril_emergency_source_hard_mcc_table where MCC = '602' AND NUMBER = '128';
-DELETE FROM qcril_emergency_source_hard_mcc_table where MCC = '602' AND NUMBER = '150';
-INSERT INTO "qcril_emergency_source_hard_mcc_table" VALUES('602','128','','');
-INSERT INTO "qcril_emergency_source_hard_mcc_table" VALUES('602','150','','');
 COMMIT TRANSACTION;
